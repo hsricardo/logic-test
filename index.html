@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hortaliças e Hortaliças</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            margin: 20px 30%;
+            background-color: #2e3137;
+            color: #ffffff;
+            font-family: 'Trebuchet MS';
+        }
+        h1 {
+            border-radius: 4px;
+            padding: 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 35px; 
+        }
+        .card {
+            background-color: #22262b;
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center field">Hortaliças e Hortaliças</h1>
+    <div class="card field">
+        <div class="card-body">
+            <form>
+                <label>Tamanho da Horta:</label>
+                <div class="form-row align-items-center field">
+                    <div class="col">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">X</div>
+                            </div>
+                            <input type="number" class="form-control" id="horta_x" placeholder="Largura" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Y</div>
+                            </div>
+                            <input type="number" class="form-control" id="horta_y" placeholder="Altura" required>
+                        </div>
+                    </div>
+                </div>
+
+                <label>Posição Inicial do Robô:</label>
+                <div class="form-row align-items-center field">
+                    <div class="col">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">X</div>
+                            </div>
+                            <input type="number" class="form-control" id="robo_x" placeholder="Largura" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Y</div>
+                            </div>
+                            <input type="number" class="form-control" id="robo_y" placeholder="Altura" required>
+                        </div>
+                    </div>
+                </div>
+
+                <label>Orientação Inicial do Robô:</label>
+                <select id="robo_dir" class="form-control align-items-center field" required>
+                    <option disabled selected>Selecione uma direção...</option>
+                    <option value="N">Norte</option>
+                    <option value="S">Sul</option>
+                    <option value="L">Leste</option>
+                    <option value="O">Oeste</option>
+                </select>
+
+                <label>Posição do Canteiro para Irrigar:</label>
+                <div class="form-row align-items-center field">
+                    <div class="col">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">X</div>
+                            </div>
+                            <input type="number" class="form-control" id="canteiro_x" placeholder="Largura" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Y</div>
+                            </div>
+                            <input type="number" class="form-control" id="canteiro_y" placeholder="Altura" required>
+                        </div>
+                    </div>
+                </div>            
+
+                <button type="submit" id="irrigar" class="btn btn-primary btn-block">Iniciar Irrigação</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <label>Resultados:</label>
+                <input type="text" class="form-control" id="resultados" placeholder="Movimentos" disabled>
+            </form>
+        </div>
+    </div>
+        
+
+</body>
+
+<script src="jquery.js"></script>
+
+</html>
